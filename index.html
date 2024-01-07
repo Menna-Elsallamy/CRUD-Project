@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./all.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="text-center text-info">CRUD SYSTEM</h1>
+    <div class="container">
+    <label class="" for="productName">productName</label>
+    <input class="form-control mb-3" type="text" id="productName">
+    <label class="" for="productPrice">productPrice</label>
+    <input class="form-control mb-3" type="text" id="productPrice">
+    <label class="" for="productCateogery">productCateogery</label>
+    <input class="form-control mb-3" type="text" id="productCateogery">
+    <label class="" for="productDescription">productDescription</label>
+    <input class="form-control mb-3" type="text" id="productDescription">
+    <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info btn-lg w-100 d-block">Add product</button>
+    <button id="UpdateBtn" onclick="updatee()" class="btn btn-outline-dark btn-lg w-100 d-none">Update Product</button>
+    <input oninput="searchProducts(this.value)" class="form-control my-3" type="text" id="Search" placeholder="Search by Name...">
+</div>
+<div class="container">
+<table class="table text-center">
+    <thead>
+        <th>productName</th>
+        <th>productPrice</th>
+        <th>productCateogery</th>
+        <th>productDescription</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </thead>
+    <tbody id="tablebody">
+      
+    </tbody>
+</table>
+</div>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./bundle.js"></script>
+</body>
+</html>
